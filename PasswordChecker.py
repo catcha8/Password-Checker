@@ -13,7 +13,7 @@ def request_api_data(query_char):
 def get_password_leaks_count(hashes, hash_to_check):
     hashes = (line.split(':') for line in hashes.text.splitlines())
     for h, count in hashes:
-        Write.Print(f'Your password was found !\n', Colors.rainbow, interval=0)
+        Write.Print(f'Your password was found {count} times !\n', Colors.rainbow, interval=0)
         if h == hash_to_check:
             return count
     return 0
