@@ -1,6 +1,6 @@
 import requests
 import hashlib
-
+from pystyle import *
 
 def request_api_data(query_char):
     url = 'https://api.pwnedpasswords.com/range/' + query_char
@@ -29,14 +29,14 @@ def main(password):
 
     count = pwned_api_check(password)
     if count:
-        print(f'{password} was found {count} times... You should probably change your password.')
+        Write.Print(f'{password} was found {count} times... You should probably change your password.', Colors.purple_to_red, interval=000.05)
     else:
-        print(f'{password} was NOT found. Carry on!')
+        Write.Print(f'{password} was NOT found. Carry on!', Colors.purple_to_blue, interval=000.05)
     return 'All passwords checked!'
 
 
 def get_pass_list():
-        return main(input("Enter your password> "))
+        return main(Write.Input("Enter your password > ", Colors.red_to_green, interval=000.10))
 
 
 if __name__ == '__main__':
