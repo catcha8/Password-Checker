@@ -13,6 +13,7 @@ def request_api_data(query_char):
 def get_password_leaks_count(hashes, hash_to_check):
     hashes = (line.split(':') for line in hashes.text.splitlines())
     for h, count in hashes:
+        Write.Print(f'Your password was found !\n', Colors.rainbow, interval=0000.001)
         if h == hash_to_check:
             return count
     return 0
@@ -41,5 +42,6 @@ def get_pass_list():
 
 if __name__ == '__main__':
     get_pass_list()
+
 
 input()
