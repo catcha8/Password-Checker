@@ -41,3 +41,5 @@ def get_pass_list():
 
 if __name__ == '__main__':
     get_pass_list()
+
+input()
