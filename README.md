@@ -17,4 +17,4 @@ But your password will not be transmitted through the Internet
 
 For more, join my discord
 
-Discord: https://discord.gg/RdVX95ysyA
+Discord: https://discord.gg/hktVzrff54
